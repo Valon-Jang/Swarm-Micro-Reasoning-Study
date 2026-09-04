@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Swarm edge message",
+  "type": "object",
+  "required": ["message_id", "round", "from", "to", "type", "claim", "confidence", "ttl"],
+  "properties": {
+    "message_id": {"type": "string"},
+    "round": {"type": "integer"},
+    "from": {"type": "string"},
+    "to": {"type": "string"},
+    "type": {"enum": ["evidence", "risk_signal", "safety_signal", "file_candidate", "hypothesis", "challenge", "conflict", "summary", "request"]},
+    "claim": {"type": "string"},
+    "source_ref": {"type": "object"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "ttl": {"type": "integer", "minimum": 0},
+    "supports": {"type": "array", "items": {"type": "string"}},
+    "contradicts": {"type": "array", "items": {"type": "string"}}
+  }
+}
