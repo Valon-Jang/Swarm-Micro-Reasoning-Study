@@ -16,11 +16,27 @@ The tested system is a deterministic system-intelligence scaffold intended to ho
 
 See [`docs/EXPERIMENT_DEFINITION.md`](docs/EXPERIMENT_DEFINITION.md).
 
-## Research question
+## Broader research program
+
+The larger question is not merely whether a particular grid topology works. It is:
+
+> Can very small reasoning units, each aware that it is part of a larger collective and restricted to local interaction, form system-level intelligence that is meaningfully stronger than the individual unit?
+
+This repository records the **first baseline** for that broader program. Local node capability was intentionally held almost fixed and weak so that topology scale could be isolated as the primary independent variable.
+
+## Research question for this baseline
 
 > If many weak nodes know their position in a mesh and can exchange evidence only with adjacent nodes, does reasoning quality emerge from topology scale alone?
 
 Tested structures included Reference-1, square grids, and 3D cubes up to `10x10x10`.
+
+## Research context
+
+This question has substantial prior lineage in cellular automata, swarm/collective intelligence, LLM multi-agent scaling, and communication-topology research. The present study does **not** claim to invent swarm intelligence or agent topology. Its narrower contribution is a mechanistic topology-only baseline: fixed weak local processors were scaled from one node to 1,000 while quality, communication cost, and runtime were measured together.
+
+The literature reviewed for this project suggests that useful collective gains often depend on variables deliberately absent from this first baseline: evolved or learned local update rules, semantic node reasoning, heterogeneous agents, task-aware topology, state-aware transmission, or persistent stigmergic environments.
+
+See [`docs/RELATED_WORK.md`](docs/RELATED_WORK.md) for the detailed literature review and positioning.
 
 ## Headline results
 
@@ -58,6 +74,7 @@ The full analysis is in [`docs/WHY_SCALING_FAILED.md`](docs/WHY_SCALING_FAILED.m
 README.md
 ├─ docs/
 │  ├─ EXPERIMENT_DEFINITION.md
+│  ├─ RELATED_WORK.md
 │  ├─ RESULTS_SCALE_1_10.md
 │  ├─ WHY_SCALING_FAILED.md
 │  └─ METHODOLOGY_AND_LIMITATIONS.md
