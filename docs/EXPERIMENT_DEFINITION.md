@@ -31,5 +31,14 @@ A dependency-light system-intelligence scaffold intended to sit before or around
 - Persistent dead-end memory across benchmark runs.
 - Autonomous tool execution.
 
-## Research meaning
-The scale 1–10 experiment measures whether connection topology and local message passing alone can improve this fixed deterministic node capability. It is a topology/system-intelligence baseline. A future experiment that attaches an actual Qwen worker changes the independent variable and must be labeled separately.
+## Broader research program
+The broader question is whether very small reasoning units, when they know they are part of a larger collective and interact locally, can form system-level intelligence stronger than the individual unit.
+
+The scale 1–10 experiment in this repository is only the first controlled baseline for that program. It deliberately removes or freezes many mechanisms that prior work suggests can matter: learned local update rules, semantic reasoning, heterogeneity, task-aware graph design, state-aware transmission, and persistent stigmergic environments.
+
+## Research meaning of the current experiment
+The scale 1–10 experiment measures whether connection topology and local message passing alone can improve a fixed deterministic node capability. It is a topology/system-intelligence baseline, not a general test of swarm intelligence and not a test of Qwen model scaling.
+
+A future experiment that attaches an actual semantic/Qwen worker changes the independent variable and must be labeled separately. Subsequent controlled interventions should test local reasoning capability, node diversity, adaptive transmission, and persistent environment/memory one at a time.
+
+See `RELATED_WORK.md` for the literature review and positioning.
