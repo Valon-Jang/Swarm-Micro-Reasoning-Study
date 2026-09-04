@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Final ChatGPT evidence packet",
+  "type": "object",
+  "required": ["packet_type", "task", "topology", "readout_node", "risk_level", "evidence_items", "metrics"],
+  "properties": {
+    "packet_type": {"const": "chatgpt_evidence_packet"},
+    "task": {"type": "string"},
+    "topology": {"type": "string"},
+    "readout_node": {"type": "string"},
+    "risk_level": {"enum": ["read_only", "file_write", "external_side_effect", "unknown"]},
+    "auto_execute_allowed": {"type": "boolean"},
+    "evidence_items": {"type": "array"},
+    "conflicts": {"type": "array"},
+    "unknowns": {"type": "array"},
+    "recommended_next_action": {"type": "string"},
+    "metrics": {"type": "object"}
+  }
+}
